@@ -1,0 +1,19 @@
+set nocompatible
+set showcmd
+set number
+
+set autoindent
+set expandtab
+set smarttab
+set shiftwidth=4
+set softtabstop=4
+
+
+" Cool tab completion stuff
+set wildmenu
+set wildmode=list:longest,full
+
+set backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
+
