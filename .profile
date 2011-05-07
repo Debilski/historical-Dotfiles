@@ -8,10 +8,11 @@ PS1='\[\033]0;`__git_ps1` \w\007\]\h:\W \u\$ '
 shopt -s histappend
 PROMPT_COMMAND=`history -a`
 export HISTCONTROL="ignoredups"
-export EDITOR="vim"
+export EDITOR="/usr/bin/vim"
 
-export PATH=/usr/local/sbin:/usr/local/bin:$PATH:/Developer/usr/bin:/usr/local/Cellar/python/2.7/Frameworks/Python.framework/Versions/2.7/bin
+export PATH=/usr/local/sbin:/usr/local/bin:$PATH:/Developer/usr/bin:/usr/local/Cellar/python/2.7.1/Frameworks/Python.framework/Versions/2.7/bin
 export PYTHONPATH=/usr/local/lib/python:$PYTHONPATH
+export PYTHONPATH=$PYTHONPATH:$HOME/Documents/projects/mdp/mdp-toolkit:$HOME/Documents/projects/autumnschool-projects
 
 alias ll="ls -l"
 alias la="ls -a"

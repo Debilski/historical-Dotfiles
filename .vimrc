@@ -1,6 +1,16 @@
+" set t_Co=256
+
+filetype off
+call pathogen#runtime_append_all_bundles()
+
+" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
+filetype plugin on
+
+" Better indentation
+filetype plugin indent on
+
 set nocompatible
 set showcmd
-set number
 
 set autoindent
 set expandtab
@@ -8,11 +18,7 @@ set smarttab
 set shiftwidth=2
 set softtabstop=2
 
-" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
-filetype plugin on
-
-" Better indentation
-filetype plugin indent on
+set number
 
 " IMPORTANT: win32 users will need to have 'shellslash' set so that latex
 " can be called correctly.
@@ -42,6 +48,8 @@ endif
 imap jj <Esc>
 inoremap ¿ß ¿
 inoremap ¿ \
+" noremap ¿ß \
+map ¿ \
 
 " NERDCommenter ----------------------------------------------------------{{{2
 
@@ -65,4 +73,9 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 au BufRead,BufNewFile *.scss set filetype=scss
+
+hi scalaNew gui=underline
+hi scalaMethodCall gui=italic
+hi scalaValName gui=underline
+hi scalaVarName gui=underline
 
